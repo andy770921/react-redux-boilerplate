@@ -1,5 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
+import App from './application/App';
+import store from './application/store';
+import GlobalStyle from './components/GlobalStyle';
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+render(
+    <>
+        <GlobalStyle />
+        <Provider store={store}>
+            <Router>
+                <App />
+            </Router>
+        </Provider>
+    </>,
+    document.querySelector('#root')
+);
