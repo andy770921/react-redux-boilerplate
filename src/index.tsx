@@ -10,7 +10,7 @@ render(
     <>
         <GlobalStyle />
         <Provider store={store}>
-            <Router>
+            <Router basename="/dist">
                 <App />
             </Router>
         </Provider>
