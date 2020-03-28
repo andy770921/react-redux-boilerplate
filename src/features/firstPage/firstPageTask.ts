@@ -35,7 +35,7 @@ export const firstEpic: Epic<
 
 // Reducer
 
-export interface State {
+interface State {
     count: number;
     data: {
         id: number;
