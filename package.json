@@ -1,7 +1,7 @@
 {
-  "name": "react-ts-tslint",
+  "name": "react-redux-router",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
   "homepage": "https://andy770921.github.io/react-redux-router",
   "repository": {
     "type": "git",
