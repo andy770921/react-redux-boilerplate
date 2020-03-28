@@ -64,6 +64,6 @@ https://andy770921.github.io/react-redux-router/
 
 4. `npm install gh-pages --save-dev -g`
 
-5. Enter `gh-pages -d dist` in command line
+5. Enter `gh-pages -d dist` in command line, change the source of GitHub Pages Settings into gh-pages
 
 6. [Additional Ref](https://medium.com/@Dragonza/react-router-problem-with-gh-pages-c93a5e243819)
