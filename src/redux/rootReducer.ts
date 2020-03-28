@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { firstReducer } from '../redux/reducers';
+import firstReducer from '../features/firstPage/firstPageTask';
 
 const rootReducer = combineReducers({
     first: firstReducer,

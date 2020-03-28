@@ -1,5 +1,6 @@
 import { from } from 'rxjs';
 
+// Simulate fetching API
 const getFirst = () => [1, 2, 3];
 
 export const dependencies = {
