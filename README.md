@@ -23,7 +23,8 @@ https://andy770921.github.io/react-redux-router/
 ## Folder Structure
 
 1. Using the concept of [Ducks pattern](https://github.com/erikras/ducks-modular-redux)
-2. Refer the style guide of [Redux official website](https://redux.js.org/style-guide/style-guide/#structure-files-as-feature-folders-or-ducks), [Redux in Actions](https://livebook.manning.com/book/redux-in-action/chapter-11/51) 
+2. Refer to the style guide of [Redux official website](https://redux.js.org/style-guide/style-guide/#structure-files-as-feature-folders-or-ducks), [Redux in Actions](https://livebook.manning.com/book/redux-in-action/chapter-11/51) 
+
 ``` 
 ┌── .vscode                    # VSCode setting for ESLint auto-fix function
 ├── dist                       # Static files like HTML template and bundled JS
