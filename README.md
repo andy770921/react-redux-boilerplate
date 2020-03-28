@@ -49,3 +49,21 @@ https://andy770921.github.io/react-redux-router/
 ├── webpack.prod-config.js     # Webpack setting in production mode
 └── tsconfig.json              # TypeScript settings
 ```
+## Using GitHub Hosting
+
+1. Add "homepage" inside `package.json`
+```js
+    {
+        "homepage": "https://andy770921.github.io/react-redux-router",
+    }
+```
+
+2. Add `<script>` inside `index.html` and `404.html`. [Script Content Ref](https://github.com/rafrex/spa-github-pages/blob/gh-pages/index.html#L58)
+
+3. Add `basename={process.env.PUBLIC_URL}` inside `<BrowserRouter>` in `index.tsx`
+
+4. `npm install gh-pages --save-dev -g`
+
+5. Enter `gh-pages -d dist` in command line
+
+6. [Additional Ref](https://medium.com/@Dragonza/react-router-problem-with-gh-pages-c93a5e243819)
