@@ -10,7 +10,7 @@ render(
     <>
         <GlobalStyle />
         <Provider store={store}>
-            <Router basename="/dist">
+            <Router basename={process.env.PUBLIC_URL}>
                 <App />
             </Router>
         </Provider>
