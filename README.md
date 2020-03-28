@@ -16,121 +16,32 @@
 
 5. Fix format error automatically on save
 
-## Details
+## Folder Structure
 
-1. `npm install --save-dev webpack webpack-cli webpack-dev-server typescript ts-loader`
-
-2. `npm install react react-dom --save` and install eslint and relavant eslint-plugins
-
-3. `npm i -D @types/react @types/react-dom`
-
-4. Modify `tscongfig.json` as follows   
-Note: customize our "outDir", delete "rootDir" because webpack will determine where the root file is and take over there
-
-```js
-{
-    "compilerOptions": {
-      "target": "es5",
-      "module": "commonjs",
-      "lib": ["ES2017", "ES7", "ES6", "DOM"],
-      "strict": true,
-      "noImplicitAny": false,
-      "removeComments": true,
-      "preserveConstEnums": true,
-      "baseUrl": "./",
-      "outDir": "./dist",
-      "typeRoots": ["node_modules/@types"],
-      "esModuleInterop": true,
-      "sourceMap": false,     // not to generate index.js.map file
-      "declaration": false,   // not to generate index.d.ts file
-      "noEmitOnError": true,  // stop producing bundled file on compilation error
-      "jsx": "react"
-    },
-    "include": ["src/*.ts","src/*.tsx"],
-    "exclude": ["node_modules", "dist"]
-}
-```
-
-5. Create `webpack.config.js` as follows  
-Note: `resolve: { extensions: [] }` is for the import syntax like `import App from './app';` without `'./app.tsx'` suffix
-
-```js
-const path = require('path'); 
-
-module.exports = {
-    mode: 'development',
-    entry: './src/index.tsx',
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
-    },
-    devServer: {
-        contentBase: "./dist",
-    },
-    module: {
-        rules: [
-            {
-                test: /\.ts$|\.tsx$/,
-                use: 'ts-loader',
-                exclude: /node_modules/
-            }
-        ]
-    },
-    resolve: {
-        extensions: ['.ts','.tsx','.js','.jsx']
-    }
-};
-```
-
-6. `npm install --save-dev clean-webpack-plugin`
-
-7. Create `webpack.prod-config.js` as follows
-
-```js
-const path = require('path');
-
-module.exports = {
-    mode: 'production',
-    entry: './src/index.tsx',
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
-    },
-    module: {
-        rules: [
-            {
-                test: /\.ts$|\.tsx$/,
-                use: 'ts-loader',
-                exclude: /node_modules/
-            }
-        ]
-    },
-    resolve: {
-        extensions: ['.ts','.tsx','.js','.jsx']
-    }
-};
-```
-
-8. Modify the script in `package.json`
-
-```js
-  "scripts": {
-    "build": "webpack --config webpack.prod-config.js",
-    "start": "webpack-dev-server",
-    "watch": "tsc -w",
-    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx"
-  },
-```
-
-9. Create and modify `eslintrc.js`
- 
-10. Add VSCode setting file `setting.json` in `.vscode` folder:
-
-```js
-{
-  "editor.formatOnSave": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true
-  }
-}
+1. Using the concept of [Ducks pattern](https://github.com/erikras/ducks-modular-redux)
+2. Refer the style guide of [Redux official website](https://redux.js.org/style-guide/style-guide/#structure-files-as-feature-folders-or-ducks), [Redux in Actions](https://livebook.manning.com/book/redux-in-action/chapter-11/51) 
+``` 
+┌── .vscode                    # VSCode setting for ESLint auto-fix function
+├── dist                       # Static files like HTML template and bundled JS
+├── src                        # All source code
+│    ├── app                   # Main component and router setting 
+│    ├── components            # Reusable component throughout different features  
+│    ├── features              # Classified by features
+│    │    ├── firstFeature
+│    │    │    ├── (Componentes)      # React Components
+│    │    │    └── firstFeatureTask   # Redux Task in specific feature 
+│    │    │                             including Actions, Action Creaters, Epics and Reducer
+│    │    └── secondFeature
+│    │         ├── (Componentes)
+│    │         └── secondFeatureTask
+│    ├── redux                 # Redux store, root action, root epics and root reducer
+│    └── index.tsx             # Redux Provider, add global style, and render to DOM
+├── .gitignore                 # Exclude files from Git version contral
+├── .eslintrc.js               # ESLint setting
+├── README.md                  # README
+├── package-lock.json          # lock ther version of dependencies packages
+├── package.json               # list dependencies packages,npm scripts, project name etc.
+├── webpack.config.js          # webpack setting in develop mode
+├── webpack.prod-config.js     # webpack setting in production mode
+└── tsconfig.json              # TypeScript settings
 ```

@@ -27,7 +27,7 @@ export const firstEpic: Epic<
         filter(isActionOf(firstAction)),
         mergeMap(() =>
             from(dependencies.getFirstAPI()).pipe(
-                map(payload => firstActionFulfilled(payload)),
+                map(payload => firstActionFulfilled(payload.count)),
                 catchError(error => of(firstActionRejected(error)))
             )
         )
@@ -53,7 +53,7 @@ export default firstReducer<State, RootAction>({
     count: 0,
     data: [],
 }).handleAction(firstActionFulfilled, (state, action) => ({ ...state, count: state.count + action.payload }));
-// .handleAction(firstActionFulfilled, (state, action) => ({
+// .handleAction(firstActionRejected, (state, action) => ({
 //     ...state,
 //     data: action.payload,
 // }));

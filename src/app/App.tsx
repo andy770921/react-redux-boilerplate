@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import FirstPage from '../features/firstPage/FirstPage';
+import FirstFeature from '../features/firstFeature/FirstFeature';
 
 const App: FC = () => (
     <Switch>
         <Route path="/">
-            <FirstPage />
+            <FirstFeature />
         </Route>
         <Redirect to="/" />
     </Switch>

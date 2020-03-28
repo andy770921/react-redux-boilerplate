@@ -2,7 +2,7 @@
     "compilerOptions": {
       "target": "es5",
       "module": "commonjs",
-      "lib": ["ES2017", "ES7", "ES6", "DOM"],
+      "lib": ["ES2017", "ES7", "ES6", "DOM", "DOM.Iterable"],
       "strict": true,
       "noImplicitAny": false,
       "removeComments": true,
