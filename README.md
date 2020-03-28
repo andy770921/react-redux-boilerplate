@@ -43,9 +43,9 @@ https://andy770921.github.io/react-redux-router/
 ├── .gitignore                 # Exclude files from Git version contral
 ├── .eslintrc.js               # ESLint setting
 ├── README.md                  # README
-├── package-lock.json          # lock ther version of dependencies packages
-├── package.json               # list dependencies packages,npm scripts, project name etc.
-├── webpack.config.js          # webpack setting in develop mode
-├── webpack.prod-config.js     # webpack setting in production mode
+├── package-lock.json          # Lock the version of dependencies packages
+├── package.json               # List dependencies packages,npm scripts, project name etc.
+├── webpack.config.js          # Webpack setting in develop mode
+├── webpack.prod-config.js     # Webpack setting in production mode
 └── tsconfig.json              # TypeScript settings
 ```
