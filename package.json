@@ -25,8 +25,7 @@
     "redux-observable": "^1.2.0",
     "rxjs": "^6.5.4",
     "styled-components": "^5.0.1",
-    "styled-reset": "^4.1.2",
-    "typesafe-actions": "^5.1.0"
+    "styled-reset": "^4.1.2"
   },
   "devDependencies": {
     "@types/react": "^16.9.25",
