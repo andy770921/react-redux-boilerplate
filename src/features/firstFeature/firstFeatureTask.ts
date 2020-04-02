@@ -1,7 +1,6 @@
 import { Epic, ofType } from 'redux-observable';
 import { of, from } from 'rxjs';
 import { catchError, map, mergeMap } from 'rxjs/operators';
-import { RootAction } from '../../redux/rootAction';
 import { RootState } from '../../redux/rootReducer';
 import { Dependencies } from '../../redux/dependencies';
 
@@ -60,7 +59,7 @@ const initialState = {
     data: [{ id: 0, name: '', link: '' }],
 };
 
-export default function firstReducer(state = initialState, action: RootAction) {
+export default function firstReducer(state = initialState, action: FirstActions) {
     switch (action.type) {
         case FIRST_ACTION:
             return { ...state, isFetching: true };
