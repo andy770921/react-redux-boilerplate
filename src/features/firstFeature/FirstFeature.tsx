@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { firstAction } from './firstFeatureTask';
 import { RootState } from '../../redux/rootReducer';
 
-const FristFeature: FC = () => {
+const FirstFeature: FC = () => {
     const count = useSelector<RootState, number>(state => state.first.count);
     const dispatch = useDispatch();
     const handleClick = () => {
@@ -23,4 +23,4 @@ const FristFeature: FC = () => {
     );
 };
 
-export default FristFeature;
+export default FirstFeature;
