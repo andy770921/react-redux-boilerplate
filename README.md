@@ -20,6 +20,12 @@ https://andy770921.github.io/react-redux-router/
 
 5. Fix format error automatically on save
 
+## Initial Setting of Styled-Component and React Router
+
+1. use `<GlobalStyle>` for resetting style
+
+2. use `<Redirect to="/" />` for handling wrong URL path
+
 ## Folder Structure
 
 1. Using the concept of [Ducks pattern](https://github.com/erikras/ducks-modular-redux)

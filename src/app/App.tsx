@@ -4,7 +4,7 @@ import FirstFeature from '../features/firstFeature/FirstFeature';
 
 const App: FC = () => (
     <Switch>
-        <Route path="/">
+        <Route exact path="/">
             <FirstFeature />
         </Route>
         <Redirect to="/" />
