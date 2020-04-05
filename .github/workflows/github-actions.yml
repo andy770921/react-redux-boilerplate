@@ -15,14 +15,17 @@ jobs:
       uses: actions/checkout@v2
       with:
         persist-credentials: false
+        
     - name: Build
       run: |
         npm install
         npm run build
+        npm install gh-pages --save-dev -g
+        gh-pages -d dist
 
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: dist
+    # - name: Deploy
+    #   uses: JamesIves/github-pages-deploy-action@releases/v3
+    #   with:
+    #     ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+    #     BRANCH: gh-pages
+    #     FOLDER: dist
