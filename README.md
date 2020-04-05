@@ -31,6 +31,7 @@ https://andy770921.github.io/react-redux-router/
 ## Folder Structure
 
 1. Using the concept of [Ducks pattern](https://github.com/erikras/ducks-modular-redux)
+
 2. Refer to the style guide of [Redux official website](https://redux.js.org/style-guide/style-guide/#structure-files-as-feature-folders-or-ducks), [Redux in Actions](https://livebook.manning.com/book/redux-in-action/chapter-11/51) 
 
 ``` 
@@ -63,10 +64,11 @@ https://andy770921.github.io/react-redux-router/
 
 1. `npm install --save-dev dotenv`
 
-2. Add "PUBLIC_URL" inside `.env`  
+2. Add `PUBLIC_URL` inside `.env`  
 ```
 PUBLIC_URL=<your-repo-name> // e.g. PUBLIC_URL=react-redux-router
 ```
+
 3. Add `getEnv` function in `webpack.prod-config.js` plugins array for getting environment variables successfully
 ```js
 const path = require('path');
@@ -92,9 +94,9 @@ module.exports = {
     ]
 };
 ```
-3. Add `<script>` in `index.html` and `404.html` and change `var segmentCount = 1` in `404.html`. [Script Content Ref](https://github.com/rafrex/spa-github-pages/blob/gh-pages/index.html#L58)
+4. Add `<script>` in `index.html` and `404.html` and change `var segmentCount = 1` in `404.html`. [Script Content Ref](https://github.com/rafrex/spa-github-pages/blob/gh-pages/index.html#L58)
 
-4. Add `basename={process.env.PUBLIC_URL}` in the props of `<BrowserRouter>` in `index.tsx`
+5. Add `basename={process.env.PUBLIC_URL}` in the props of `<BrowserRouter>` in `index.tsx`
 
 ## Deploy to GitHub Pages Manually
 
@@ -120,7 +122,7 @@ on:
 jobs:
   build:
     runs-on: macos-latest
-    
+
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -143,6 +145,6 @@ jobs:
 
 1. [GitHub Pages Ref](https://medium.com/@Dragonza/react-router-problem-with-gh-pages-c93a5e243819)
 
-2. [GitHub Pages 2](https://zhuanlan.zhihu.com/p/102642360)
+2. [GitHub Pages Ref 2](https://zhuanlan.zhihu.com/p/102642360)
 
 3. [Use Env Variables Ref](https://medium.com/@trekinbami/using-environment-variables-in-react-6b0a99d83cf5)
