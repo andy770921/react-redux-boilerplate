@@ -28,7 +28,7 @@ PUBLIC_URL=<your-repo-name>
 // e.g. https://andy770921.github.io/react-redux-router/
 ```
 
-7. Deploy to gh-pages branch automatically via [GitHub Actions](https://github.com/marketplace/actions/github-pages-action)
+7. Deploy to gh-pages branch automatically via [GitHub Actions](https://github.com/marketplace/actions/github-pages-action) by setting [ACCESS_TOKEN](#github-actions)
 
 ## Initial Setting of Styled-Component and React Router
 
@@ -68,7 +68,7 @@ PUBLIC_URL=<your-repo-name>
 ├── webpack.prod-config.js     # Webpack setting in production mode
 └── tsconfig.json              # TypeScript settings
 ```
-## Using GitHub Hosting
+## Using GitHub Pages Hosting
 
 1. `npm install --save-dev dotenv`
 
@@ -115,7 +115,7 @@ module.exports = {
 
 2. Enter `gh-pages -d dist` in command line, change the source of GitHub Pages Settings into gh-pages
 
-## Deploy to GitHub Pages by CI/CD
+## <a name="github-actions"></a>Deploy to GitHub Pages by CI/CD
 
 1. [Add a personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) and then copy the value 
 
