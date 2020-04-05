@@ -20,7 +20,15 @@ https://andy770921.github.io/react-redux-router/
 
 5. Fix format error on save automatically
 
-6. Deploy to gh-pages branch automatically via [GitHub Actions](https://github.com/marketplace/actions/github-pages-action)
+6. Replace `<your-repo-name>` with custom relative url inside `.env`  
+```
+PUBLIC_URL=<your-repo-name> 
+// e.g. PUBLIC_URL=react-redux-router  
+// The setting will direct React-Router to the right url
+// e.g. https://andy770921.github.io/react-redux-router/
+```
+
+7. Deploy to gh-pages branch automatically via [GitHub Actions](https://github.com/marketplace/actions/github-pages-action)
 
 ## Initial Setting of Styled-Component and React Router
 
@@ -64,9 +72,12 @@ https://andy770921.github.io/react-redux-router/
 
 1. `npm install --save-dev dotenv`
 
-2. Add `PUBLIC_URL` inside `.env`  
+2. Add your custom `PUBLIC_URL` inside `.env`  
 ```
-PUBLIC_URL=<your-repo-name> // e.g. PUBLIC_URL=react-redux-router
+PUBLIC_URL=<your-repo-name> 
+// e.g. PUBLIC_URL=react-redux-router  
+// The setting will direct React-Router to the right url
+// e.g. https://andy770921.github.io/react-redux-router/
 ```
 
 3. Add `getEnv` function in `webpack.prod-config.js` plugins array for getting environment variables successfully
