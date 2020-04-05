@@ -5,6 +5,7 @@ import FirstFeature from '../features/firstFeature/FirstFeature';
 const App: FC = () => (
     <Switch>
         <Route exact path="/">
+            {console.log('process.env.PUBLIC_URL-test', process.env.PUBLIC_URL)}
             <FirstFeature />
         </Route>
         <Redirect to="/" />
