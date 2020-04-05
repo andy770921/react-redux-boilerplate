@@ -30,15 +30,15 @@ PUBLIC_URL=<your-repo-name>
 
 7. Deploy to gh-pages branch automatically via [GitHub Actions](https://github.com/marketplace/actions/github-pages-action) by setting [ACCESS_TOKEN](#github-actions)
 
-## Initial Setting of Styled-Component and React Router
+## Initial Setting of the Project
 
-1. use `<GlobalStyle>` for resetting style
+1. Style setting: `<GlobalStyle>` for resetting global style in the file `src/index.tsx`
 
-2. use `<Redirect to="/" />` for handling wrong URL path
+2. Route setting: `<Redirect to="/" />` for handling wrong URL path in the file `src/app/App.tsx`
 
 ## Folder Structure
 
-1. Using the concept of [Ducks pattern](https://github.com/erikras/ducks-modular-redux)
+1. Use the concept of [Ducks pattern](https://github.com/erikras/ducks-modular-redux)
 
 2. Refer to the style guide of [Redux official website](https://redux.js.org/style-guide/style-guide/#structure-files-as-feature-folders-or-ducks), [Redux in Actions](https://livebook.manning.com/book/redux-in-action/chapter-11/51) 
 
