@@ -58,11 +58,9 @@ https://andy770921.github.io/react-redux-router/
 ```
 ## Using GitHub Hosting
 
-1. Add "homepage" inside `package.json`
-```js
-    {
-        "homepage": "https://andy770921.github.io/react-redux-router",
-    }
+1. Add "PUBLIC_URL" inside `.env`
+```
+PUBLIC_URL=https://andy770921.github.io/react-redux-router
 ```
 
 2. Add `<script>` inside `index.html` and `404.html`. [Script Content Ref](https://github.com/rafrex/spa-github-pages/blob/gh-pages/index.html#L58)

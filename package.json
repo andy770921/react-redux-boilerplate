@@ -1,7 +1,6 @@
 {
   "name": "react-redux-router",
   "version": "1.0.0",
-  "homepage": "https://andy770921.github.io/react-redux-router",
   "repository": {
     "type": "git",
     "url": "https://github.com/andy770921/react-redux-router.git"
@@ -34,6 +33,7 @@
     "@types/styled-components": "^5.0.1",
     "@typescript-eslint/eslint-plugin": "^2.20.0",
     "@typescript-eslint/parser": "^2.20.0",
+    "dotenv": "^8.2.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "18.0.1",
     "eslint-config-prettier": "^6.10.0",
