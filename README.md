@@ -106,9 +106,9 @@ module.exports = {
 
 ## Deploy to GitHub Pages by CI/CD
 
-1. [add a personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) and then copy the value 
+1. [Add a personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) and then copy the value 
 
-2. [add a Secrets key](https://stackoverflow.com/questions/53648652/how-to-use-environment-variable-in-github-page) `ACCESS_TOKEN` with the value of 1.
+2. [Add a Secrets key](https://stackoverflow.com/questions/53648652/how-to-use-environment-variable-in-github-page) `ACCESS_TOKEN` with the value of personal access token
 
 3. Create the file `.github/workflows/github-actions.yml`:
 ```yaml
