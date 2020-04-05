@@ -10,7 +10,6 @@ render(
     <>
         <GlobalStyle />
         <Provider store={store}>
-            {console.log('process.env.PUBLIC_URL', process.env.PUBLIC_URL)}
             <Router basename={process.env.PUBLIC_URL}>
                 <App />
             </Router>
