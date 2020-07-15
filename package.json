@@ -1,9 +1,9 @@
 {
-  "name": "react-redux-router",
+  "name": "react-redux-boilerplate",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/andy770921/react-redux-router.git"
+    "url": "https://github.com/andy770921/react-redux-boilerplate.git"
   },
   "license": "ISC",
   "author": "Andy Chou",
