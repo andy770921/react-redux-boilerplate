@@ -1,6 +1,6 @@
 ## Demo
 
-https://andy770921.github.io/react-redux-router/
+https://andy770921.github.io/react-redux-boilerplate/
 
 ## Installation
 
